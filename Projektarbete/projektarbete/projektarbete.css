@@ -1,0 +1,220 @@
+.container {
+    display: grid;
+    background-color: white;
+   
+    gap: 15px;
+    grid-template-areas: 
+        "header header header"
+        "main main main"
+        "special special special"
+        "footer footer footer";
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto auto; 
+
+    width: 100%; 
+    margin: 0 auto; 
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+/* Reset body and HTML margins */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+
+/* Styles for the main content section */
+main{
+    
+    grid-area: main;
+    text-align: center;
+  
+    }
+main img{
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+ .special{
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 60px;
+    
+   
+ }   
+ .rubrik {
+    grid-row: 1;
+    justify-self: center;
+    grid-column-start: 1;
+    grid-column-end: span 3;
+}
+.image {
+        grid-row: 2;}
+
+ .image img{ 
+    margin-left: 50px;
+    width: auto;
+    max-height:270px ;
+    max-width: 500px;
+    object-fit: cover;
+
+    
+}
+    
+/* CSS-stilar för header */
+header{
+    grid-area: header;
+}
+.header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color:  #604028;
+    color: white;
+    padding: 10px 20px; 
+}
+
+.logo img {
+    height: 60px; 
+    width: 200px;
+    border-radius: 50%;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.menu ul li a:hover {
+    color: lightgray;
+}
+
+/* General paragraph and heading styles */
+
+p {
+    font-family: "Times New Roman", Times, serif; 
+}
+h1, h2{
+    color:rgb(215, 136, 16);
+    font-weight: bold;
+}
+ /* CSS-stilar för kontaktformuläret */
+fieldset{
+    border-radius: 15px;
+    max-width: 800px;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    height: 600px;
+    margin-top: 20px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://web.trondelagfylke.no/contentassets/5308679236294ac5b54c01903372352c/contact-us-hd-1.jpg?width=1280);
+} 
+
+textarea{
+    height: 100px;
+}
+button{
+    background-color:#8b4513;
+    color: white;
+    padding:15px 30px;
+    border: none;
+    border-radius: 10px; 
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+ 
+input, textarea{
+    width: 100%;
+    box-sizing: border-box;
+}  
+ /* CSS-stilar för events */
+
+.events{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+    height: 500px;
+  
+}
+.events img{
+    width: auto;
+    max-height:270px ;
+    max-width: 400px;
+    object-fit: cover;
+
+    
+}
+
+/*  CSS-stilar för om-oss sida */
+
+.cafe-button {
+    position: relative;
+     
+}
+.button-container{
+    position: absolute;
+    top: 50%;
+    right: 20px
+   
+    
+}
+.button-container a {
+    padding: 10px 20px;
+    text-decoration: none; 
+    color: white; 
+    border-radius: 10px; 
+    background-color: #8b4513;
+    display: block;
+   
+    
+   
+}
+
+/* CSS-stilar för menu sida */
+
+.menu img{
+    object-fit:contain;
+    
+}
+/* book a table */
+
+.book {
+    border-radius: 15px;
+    max-width: 500px;
+    height:auto;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    color: white;
+    font-weight: bold;    
+} 
+
+
+ /* Styles for the footer */
+ 
+footer{
+    background-color: #604028;
+    grid-area: footer;
+    text-align: center;
+    color: white;
+    padding: 10px 15 px;
+    }
